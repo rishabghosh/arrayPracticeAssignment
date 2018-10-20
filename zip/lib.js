@@ -1,7 +1,7 @@
 const zipElements = function(list1, list2){
   let result = [];
   let maxLength = list1.length;
-  if(list2.length > maxLength){
+  if(list2.length < maxLength){
     maxLength = list2.length;
   }
 

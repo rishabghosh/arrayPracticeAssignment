@@ -19,13 +19,13 @@ testZipElements(input1, input2, [], zipElements);
 //test with one empty arrays :
 input1 = [1];
 input2 = [];
-expected = [[1,undefined]],
+expected = [],
 testZipElements(input1, input2, expected, zipElements);
 
 //test with one empty arrays :
 input1 = [];
 input2 = [1];
-expected = [[undefined, 1]],
+expected = [],
 testZipElements(input1, input2, expected, zipElements);
 
 //test with one elements:
@@ -43,7 +43,7 @@ testZipElements(input1, input2, expected, zipElements);
 //test with multiple elements :
 input1 = [1, 2, 3, 'a', 'b', 'c'];
 input2 = [2,3,'c', 'd', 1, 5, 7];
-expected = [ [1,2], [2,3], [3,'c'], ['a', 'd'], ['b', 1], ['c', 5], [undefined, 7] ],
+expected = [ [1,2], [2,3], [3,'c'], ['a', 'd'], ['b', 1], ['c', 5] ],
 testZipElements(input1, input2, expected, zipElements);
 
 
