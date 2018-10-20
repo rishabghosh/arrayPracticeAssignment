@@ -1,17 +1,16 @@
-const partition = function(list, delimiter){
-  let largerPart = [];
-  let smallerPart = [];
-  let result = [largerPart, smallerPart];
+const isGreater = function(number, limit){
+  if(number > limit){
+    return 0;
+  }
+  return 1;
+}
+
+const partition = function(list, limit){
+  let result = [ [], [] ];
 
   for( let index = 0; index < list.length; index ++){
-
-    if(list[index] > delimiter){
-      largerPart.push(list[index]);
-    } else {
-      smallerPart.push(list[index]);
-    }
+    result[ isGreater(list[index], limit) ].push(list[index]);
   }
-
   return result;
 }
 
