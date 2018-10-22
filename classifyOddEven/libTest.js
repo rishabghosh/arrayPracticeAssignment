@@ -32,4 +32,4 @@ assertEq( even([-2]), [-2] );
 assertEq( odd([1,2,3,4]), [1,3] );
 assertEq( even([1,2,3,4]), [2,4] );
 
-
+console.log( "All tests passed");

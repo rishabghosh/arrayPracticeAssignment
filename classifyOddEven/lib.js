@@ -1,27 +1,19 @@
-const selectOddNumbers = function(listOfNumbers){
-  let listOfOdds = [];
-  for(let index = 0; index < listOfNumbers.length; index ++){
-    if(listOfNumbers[index] % 2 != 0){
-      listOfOdds.push(listOfNumbers[index]);
-    }
-  }
-  return listOfOdds;
+const isEven = function(number){
+  return ( number %2 === 0);
 }
 
-const selectEvenNumbers = function(listOfNumbers){
-  let listOfEvens = [];
-  for(let index = 0; index < listOfNumbers.length; index ++){
-    if(listOfNumbers[index] % 2 == 0){
-      listOfEvens.push(listOfNumbers[index]);
-    }
-  }
-  return listOfEvens;
+const isOdd = function(number){
+  return ( number %2 !== 0);
 }
 
- 
-exports.odd = selectOddNumbers;
-exports.even = selectEvenNumbers;
+const extractEvens = function(list){
+  return list.filter( isEven )
+}
 
+const extractOdds = function(list){
+  return list.filter( isOdd )
+}
 
-
+exports.odd = extractOdds;
+exports.even = extractEvens;
 
