@@ -1,18 +1,10 @@
-const isEven = function(counter, number){
-  let {count} = counter;
-  if( number %2 === 0){
-    count ++;
-  }
-  return count;
+const isEven = function(number){
+  return ( number %2 === 0);
 }
  
 const countEvens = function(list){
-  let counter = {count : 0};
-  for(let index = 0; index < list.length; index ++){
-    counter.count = isEven(counter, list[index]);
-
- }
-  return counter.count;
+  totalEvens = list.filter( isEven )
+  return totalEvens.length;
 }
 
 exports.countEvens = countEvens;
