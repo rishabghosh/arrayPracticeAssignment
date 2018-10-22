@@ -11,28 +11,28 @@ const testCountOdds = function(input,expected,func){
 }
 //test with zero :
 input = [0];
-testCountOdds(input,[],countOdds);
+testCountOdds(input, 0, countOdds);
 
 //test with one odd :
 input = [1];
-testCountOdds(input,[1],countOdds);
+testCountOdds(input, 1, countOdds);
 
 //test with one even :
 input = [2];
-testCountOdds(input,[],countOdds);
+testCountOdds(input, 0, countOdds);
 
 //test with negetive odd :
 input = [-1];
-testCountOdds(input, [-1], countOdds);
+testCountOdds(input, 1, countOdds);
 
 //test with negetive even :
 input = [-2];
-testCountOdds(input,[],countOdds);
+testCountOdds(input, 0, countOdds);
 
 //test with two odds :
 input = [-1, 1];
-testCountOdds( input, [-1, 1], countOdds);
+testCountOdds( input, 2, countOdds);
  
 //test with multiple numbers : 
 input = [1,2,3,4,5,6,0,-1,-2,-3,-4,-5,-6]
-testCountOdds( input,[1,3,5,-1,-3,-5], countOdds);
+testCountOdds( input, 6, countOdds);

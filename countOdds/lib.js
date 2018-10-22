@@ -1,11 +1,10 @@
+const isOdd = function(number){
+  return ( number %2 !== 0);
+}
+
 const countOdds = function(list){
-  const result = [];
-  for(let index = 0; index < list.length; index ++){
-    if(list[index] %2 !== 0){
-      result.push(list[index])
-    }
-  }
-  return result;
+  totalOdds = list.filter( isOdd )
+  return totalOdds.length;
 }
 
 exports.countOdds = countOdds;
