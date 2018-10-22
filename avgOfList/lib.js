@@ -1,9 +1,9 @@
+const addTwoElems = function(num1,num2){
+  return num1+num2;
+}
+
 const calculateAvg = function(list){
-  let result = 0;
- for(let index = 0; index < list.length; index ++){
-  result += list[index];
-  }
-  return result;
+  return list.reduce( addTwoElems ); 
 }
 
 exports.calculateAvg = calculateAvg;
