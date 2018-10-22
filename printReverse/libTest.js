@@ -25,3 +25,4 @@ assertEq( reverse([1, 2, 'a', 'b', 'c']), ['c', 'b', 'a', 2 ,1] );
 //check with characters : 
 assertEq( reverse([ "/", "\n", "*"]), [ "*", "\n", "/"] );
 
+console.log( "All tests passed" );
