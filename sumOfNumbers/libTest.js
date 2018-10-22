@@ -21,3 +21,5 @@ assertEq( sum([2,3,4,5,66,]), 80);
 
 //check with positive & negetive numbers : 
 assertEq( sum([2,-2,34,-34,56,-56]), 0);
+
+console.log( "All tests passed" );
