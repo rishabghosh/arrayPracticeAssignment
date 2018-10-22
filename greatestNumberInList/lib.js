@@ -1,14 +1,9 @@
-const findGreatestNumber = function(list){
-  let index = 0;
-  let result = list[index];
-
-  while(index < list.length){
-    if(result < list[index + 1]){
-      result = list[index + 1];
-    }
-    index ++;
-}
-  return result ;
+const findmax = function(num1, num2){
+  return Math.max(num1, num2);
 }
 
-exports.greatestNumber = findGreatestNumber;
+const greatestNumber = function(list){
+  return list.reduce( findmax );
+}
+
+exports.greatestNumber = greatestNumber;
