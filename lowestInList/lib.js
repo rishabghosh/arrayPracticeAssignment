@@ -1,14 +1,9 @@
-const findLowestNumber = function(list){
-  let index = 0;
-  let result = list[index];
-
-  while(index < list.length){
-    if(result > list[index + 1]){
-      result = list[index + 1];
-    }
-    index ++;
-}
-  return result ;
+const findMin = function(num1, num2){
+  return Math.min(num1, num2);
 }
 
-exports.lowestNumber = findLowestNumber;
+const lowestNumber = function(list){
+  return list.reduce( findMin );
+}
+
+exports.lowestNumber = lowestNumber;
