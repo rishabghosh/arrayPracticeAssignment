@@ -1,16 +1,17 @@
-const isGreater = function(number, limit){
-  if(number > limit){
-    return 0;
-  }
-  return 1;
-}
-
 const partition = function(list, limit){
   let result = [ [], [] ];
 
-  for( let index = 0; index < list.length; index ++){
-    result[ isGreater(list[index], limit) ].push(list[index]);
+  const isGreater = function(number){
+    return number > limit;
   }
+
+  const isLowerOrEq = function(number){
+    return number <= limit;
+  }
+
+  result[0] = list.filter(isGreater);
+  result[1] = list.filter(isLowerOrEq);
+
   return result;
 }
 
