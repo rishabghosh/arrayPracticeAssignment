@@ -1,12 +1,10 @@
-const extractDigits = function(number){
-  let object = {input : number};
-  object["string"] = object.input.toString();
-  let result = [];
+const evaluateString = function(string){
+  return eval(string); 
+}
 
-  for(let index = 0; index < object.string.length; index ++){
-      result.push( parseInt( object.string[index] ) ); 
-  }
-  return result;
+const extractDigits = function(number){
+  let stringOfNumbers = number.toString().split("");
+  return stringOfNumbers.map( evaluateString );
 }
 
 exports.extractDigits = extractDigits;
