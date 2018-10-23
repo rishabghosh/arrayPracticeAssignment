@@ -1,9 +1,11 @@
-const selectEverySecond = function(elements){
-  let result = [];
-  for( let index = 1; index < elements.length; index += 2){
-    result.push( elements[index] )
+const mapIndex = function(index){
+  return function(){
+    return index++ %2 !== 0;
   }
-  return result;
+}
+
+const selectEverySecond = function(list){
+  return list.filter( mapIndex(0) );
 }
 
 exports.selectEverySecond = selectEverySecond;
