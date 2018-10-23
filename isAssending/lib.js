@@ -1,16 +1,20 @@
 const isAssending = function(list){
-  let result = {output : "yes"};
+  let result = "yes";
 
-  if(list.length < 2){
-    result["output"] = "Dont have enough data";
-  }
-
-  for(let index = 0; index < list.length; index ++){
-    if(list[index] > list[index+1]){
-      result = {output : "no"};
+  const updateResult = function(acc, elem){
+    if(acc > elem){
+      result = "no";
     }
+    return elem;
   }
-  return result.output;
+  
+  if(list.length < 2){
+    return "Dont have enough data";
+  }
+
+  list.reduce(updateResult); 
+
+  return result;
 }
 
 exports.isAssending = isAssending;
