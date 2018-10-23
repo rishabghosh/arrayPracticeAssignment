@@ -1,11 +1,8 @@
 const howManyAboveLimit = function(list, threshold){
-  let result = 0;
-  for(let index = 0; index < list.length; index ++){
-    if(list[index] > threshold){
-      result ++;
-    }
+  const isAbove = function(number){
+    return number > threshold
   }
-  return result;
+  return list.filter(isAbove).length;
 }
 
 exports.howManyAboveLimit = howManyAboveLimit;
