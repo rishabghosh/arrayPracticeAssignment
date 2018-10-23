@@ -1,4 +1,4 @@
-const fiboSeries = function(length){
+const reverseFibo = function(length){
   let totalFibo = [];
   let firstNumber = -1;
   let secondNumber = 1;
@@ -10,8 +10,8 @@ const fiboSeries = function(length){
     secondNumber = result;
     totalFibo.push(result);
   }
-  return totalFibo ;
+  return totalFibo.reverse() ;
 }
 
 
-exports.fiboSeries = fiboSeries;
+exports.reverseFibo = reverseFibo;
