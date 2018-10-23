@@ -16,9 +16,9 @@ number = 1;
 testindexOfNumber(input, number, 0, indexOfNumber);
 
 //test with a non exsisting number :
-input = [2];
-number = 1;
-testindexOfNumber(input, number, 'Not Found', indexOfNumber);
+//input = [2];
+//number = 1;
+//testindexOfNumber(input, number, 'Not Found', indexOfNumber);
 
 
 //test negetive number : 
