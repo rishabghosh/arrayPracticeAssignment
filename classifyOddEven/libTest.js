@@ -1,5 +1,7 @@
 const assertEq = require("assert").deepEqual;
-const odd = require("./lib.js").odd;
+
+// Dhruv: Can use deconstruction here, instead of requiring twice?
+const odd = require("./lib.js").odd;     // What does odd do, or did we mean extractOdd
 const even = require("./lib.js").even;
 
 //equal wont work because expecetd and original array outputs have diff addresses.
@@ -12,8 +14,8 @@ assertEq( even([]), []);
 assertEq( odd([1]), [1]);
 assertEq( even([1]), []);
 
-//checking with odd and even:
-assertEq( odd([1,2]), [1]);
+//checking with odd and even: // Dhruv :  we check for a array of [odd,even] why not [even,odd]?
+assertEq( odd([1,2]), [1]); 
 assertEq( even([1,2]), [2]);
 
 //checking with one even:

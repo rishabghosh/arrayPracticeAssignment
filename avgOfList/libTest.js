@@ -1,5 +1,7 @@
-let assertEq = require('assert').deepEqual;
+let assertEq = require('assert').deepEqual; // Controversial name, assertEq is deepEqual is quite implicit. assertArrayEqual, assertDeepEqual or something similar is better.
 let {calculateAvg}  = require('./lib.js');
+
+// There are no real tests of average here...
 
 const testAvg = function(input,expected,func){
   let actual = func(input);

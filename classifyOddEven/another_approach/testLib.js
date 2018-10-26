@@ -1,3 +1,4 @@
+// Dhruv : Try using reduce do to the same
 exports.classifyNumbers = function(numbers){
   let evens = [];
   let odds = [];
@@ -6,7 +7,7 @@ exports.classifyNumbers = function(numbers){
   for(let index = 0; index < numbers.length; index ++){
     evens.push(numbers[index]);
 
-    if(numbers[index] % 2 != 0){
+    if(numbers[index] % 2 != 0){ // Dhruv : Try avoiding if
      evens.pop(numbers[index]);
       odds.push(numbers[index]);
     }
